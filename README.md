@@ -14,6 +14,10 @@ Este é um aplicativo Shiny desenvolvido para análise e pontuação de crédito
 - **Treinamento de Modelos**: Permite treinar modelos de pontuação de crédito com os dados fornecidos.
 - **Manipulação de Dados de Produtos**: Permite importar e editar dados de produtos bancários.
 
+
+https://github.com/PedroInteraminense/Shiny-BANK---CREDIT-SCORE/assets/67659484/adf8dcd4-a30c-463e-8b66-f337b0979bf9
+
+
 ## Tecnologias Utilizadas
 
 ### Linguagens de Programação
