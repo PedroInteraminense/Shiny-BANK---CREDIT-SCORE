@@ -1,0 +1,3 @@
+smote_train <- smote_train %>% as_tibble() %>% mutate(AttritionFlag = as.numeric(AttritionFlag )) %>% 
+  mutate(AttritionFlag = ifelse(AttritionFlag == 2, 1, ifelse(AttritionFlag == 1, 0, AttritionFlag)))
+

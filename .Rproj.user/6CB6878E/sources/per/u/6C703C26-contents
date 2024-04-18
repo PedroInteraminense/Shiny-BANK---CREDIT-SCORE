@@ -1,0 +1,22 @@
+dados <- credit_score %>%  select(-c("CLIENTNUM", "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1", 
+                              "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"))
+bases <- list()
+bases$credit_score <- dados
+
+hchart(hist(data$Total_Trans_Ct, breaks = 30, plot = F),
+       type = 'histogram', name = 'Total_Trans_Ct') %>%
+  hc_colors(c("#FF4500", "#FFD700", "#008080", "#006400", "#1C1C1C", "#B8860B")) %>%
+  hc_yAxis(title = list(text = ""))
+
+
+h2 <- data %>%
+      select(Total_Trans_Ct_f) %>%
+      group_by(Total_Trans_Ct_f) %>%
+      count()
+
+    highchart() %>%
+      hc_chart(type ="column", options3d = list(enabled = TRUE, beta = 15, alpha = 15)) %>%
+      hc_xAxis(categories = h2$Total_Trans_Ct_f) %>%
+      hc_add_series(data = h2$n, name = "Total_Trans_Ct_f") %>%
+      hc_colors(c("#FF4500", "#FFD700", "#008080", "#006400", "#1C1C1C", "#B8860B"))
+    

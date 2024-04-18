@@ -1,0 +1,430 @@
+/* Atualizar a cor do menu sanduíche - atualizar 'background-color' */
+.skin-blue .main-header .navbar .sidebar-toggle {
+    color: #fff;
+    background-color: #042940;
+    border-radius: 5px;
+    padding: 7px 13px 5px 13px;
+    margin: 9px;
+}
+
+/* Atualizar a cor do menu sanduíche - ao passar o mouse - atualizar 'background' */
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background: #042940;
+    color: #fff;
+}
+
+/* Atualizar a cor de fundo da barra onde fica a logo - atualizar 'background' */
+.skin-blue .main-header .logo {
+    background: #042940;
+}
+
+/* Atualizar a cor de fundo da barra onde fica a logo - ao passar o mouse em cima - atualizar 'background' */
+.skin-blue .main-header .logo:hover {
+    background: #042940;
+}
+
+
+.sidebar-menu {
+    margin-top: 0px;
+}
+
+.sidebar-menu .treeview-menu {
+    padding-left: 0px;
+    border-left: 5px solid #042940;
+}
+
+/* Atualizar a cor de fundo do link do menu - ao passar o mouse em cima - atualizar 'background' */
+.skin-blue .main-sidebar .sidebar .sidebar-menu a:hover {
+  background: #042940;
+  border-radius: 0;
+  color: #fff;
+  border: none;
+}
+
+/* alteração da fonte do texto do side bar */
+
+.skin-blue .main-sidebar .sidebar .sidebar-menu a {
+    color: #666;
+    /* font-family: ui-sans-serif; */
+}
+
+/* Atualizar a cor de fundo do link do menu - que for clicado - atualizar  'background' */
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+  background: #042940;
+  border-radius: 0;
+  color: #FFF;
+  border: none;
+}
+
+
+/* Atualizar a cor da barra do menu - Top - atualizar 'background' */
+.skin-blue .main-header .navbar {
+    background: #042940;
+    box-shadow: none;
+}
+
+
+.title-header{
+  color: #fff;
+  padding-right: 5px;
+  font-family: 'Grape Nuts', cursive !important; 
+}
+
+
+
+/***************************************/
+/***************************************/
+
+
+.dataTables_scrollHead {
+    background-color: #042940;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.dt-buttons > button.dt-button {
+    color: #fff;
+    border: #042940;
+    background: #042940;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.dt-buttons > button.dt-button:hover {
+    color: #053b49;
+    border: #042940;
+    background: #042940;
+}
+
+/* borda arredondada dos botões */
+
+.btn {
+    border-radius: 8px;
+}
+
+li.btn-upload-data.dropdown {
+    width: 100px;
+    padding: 3px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #042940;
+    border-radius: 50px;
+    margin: 10px;
+    color: #FFF;
+    margin-left: 30px;
+}
+
+li.btn-upload-data.dropdown > i {
+    color: #FFF;
+}
+
+li.btn-upload-data.dropdown:hover {
+    color: #D0DDE6;
+    box-shadow: 1px 1px #042940;
+}
+
+h3.control-sidebar-heading {
+    display: none;
+}
+
+text.highcharts-title > tspan {
+    font-size: 15px;
+    color: #5e5e5e !important;
+    font-weight: 600;
+}
+
+text.highcharts-title {
+  fill: #5e5e5e !important;
+}
+
+/********/
+
+ul.nav.nav-tabs.nav-justified.control-sidebar-tabs {
+    display: none;
+}
+
+aside.control-sidebar.control-sidebar-light {
+    width: 320px;
+}
+
+/******/
+
+
+.select-box {
+  margin-top: -28px;
+}
+
+.box-header .box-title {
+    font-size: 14.5px;
+    padding: 8px;
+    font-weight: bold!important;
+    color: #727272 !important;
+    margin-bottom: 6px;
+}
+
+.text-success{
+  color = #009326;
+}
+
+/* --------------------------------------- */
+
+.stat-list {
+    list-style: none;
+    padding: 0px 15px;
+    margin: 0;
+}
+
+.no-margins {
+    margin: 0 !important;
+}
+
+.stat-percent {
+    float: right;
+    text-shadow: 0.2px 0.2px #afafaf;
+}
+
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+.progress-bar-promotor {
+    background-color: #138e84;
+}
+
+.progress-bar-neutro {
+    background-color: #EFC88B;
+}
+
+.progress-bar-detrator {
+    background-color: #F05D5E;
+}
+
+.progress-mini, .progress-mini .progress-bar {
+    height: 5px;
+    margin-bottom: 0;
+}
+
+.progress-small, .progress-mini {
+    margin-top: 5px;
+}
+
+.progress-mini-top, .progress-mini-top .progress-bar-top {
+    height: 5px;
+    margin-bottom: 0;
+}
+
+.progress-small-top, .progress-mini-top {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 6px;
+}
+
+li.element-list {
+    padding: 8px 0px;
+}
+
+.small-element {
+  color:#6b6b6b;
+  font-style: italic;
+}
+
+
+li.list-group-item {
+    border: none;
+}
+
+.card {
+    font-size: 17px;
+}
+
+
+.main-header .sidebar-toggle:before {
+    content: "☰";
+}
+
+
+/* ----------------------------------------  */
+
+body {
+    font-family: 'questrial','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
+}
+
+body, label, input, button, select, box, h3, .h3 {
+    font-family: 'questrial','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
+    color: #212121;
+}
+
+body, label, input, button, select, box, h1, h2, h3, p{
+    font-family: 'questrial','HelveticaNeue','Helvetica Neue','Helvetica-Neue',Helvetica,Arial,sans-serif;
+    
+}
+
+.skin-blue .main-sidebar .sidebar .sidebar-menu .active a {
+    color: #84d4f4; /* Atualizar a cor do texto no menuItem */
+}
+
+
+
+/* ---------------------------------------------- */
+
+
+div#salario_bruto{
+  width: 100%;
+}
+
+.small-box.bg-purple >.inner > p {
+  font-size: 15px;
+  text-align: left;
+  color: #f4f3ee;
+}
+
+
+.small-box.bg-purple > .inner > h3 {
+  font-size: 40px;
+  text-align: left;
+  color: #fff;
+}
+
+.bg-purple{
+  background-image: linear-gradient(
+140deg
+, #212f45 0%, #1d4482 60%, #0373a6 98%);
+border-radius: 5px;
+}
+
+
+/* ----------------------------------------  */
+
+div#salario_final{
+  width: 100%;
+}
+
+.small-box.bg-light-blue >.inner > p {
+  font-size: 15px;
+  text-align: left;
+  color: #0c1452;
+}
+
+
+.small-box.bg-light-blue > .inner > h3 {
+  font-size: 32px;
+  text-align: left;
+  color: #0c1452;
+}
+
+.h3 {
+    padding-bottom: 10px;
+}
+
+.bg-light-blue{
+  background-image: linear-gradient(
+140deg
+, #5aa7c4 0%, #84d4f4 60%, #b5e3f5 98%);
+border-radius: 5px;
+}
+
+
+/* ----------------------------------------  */
+
+div#salario_final{
+  width: 100%;
+}
+
+.small-box.bg-aqua >.inner > p {
+  font-size: 15px;
+  text-align: left;
+  color: #fff;
+}
+
+
+.small-box.bg-aqua > .inner > h3 {
+  font-size: 32px;
+  text-align: left;
+  color: #fff;
+}
+
+
+.bg-aqua{
+  background-image: linear-gradient(
+140deg
+, #212f45 0%, #1d4482 60%, #0373a6 98%);
+border-radius: 5px;
+}
+
+
+
+
+/* ----------------------------------------  */
+
+.btn-default {
+    background-color: #0c1452;
+    color: #fff;
+}
+
+.btn-default:hover {
+    background-color: #0c1452;
+    color: #84d4f4;
+    border-color: #84d4f4;
+}
+
+.modal-dialog{ width:85% }
+
+
+
+.box.box-solid, .box {
+    min-height: 50px;
+}
+
+.btn.radiobtn.btn-Selecione.um.indicador.para.marca {
+    background: aliceblue;
+}
+
+
+.btn.radiobtn.btn-Selecione.um.indicador.para.marca.active, .btn.radiobtn.btn-Selecione.um.indicador.para.marca:active {
+    background: #b1e7fcad;
+    background-image: none;
+    outline: 0;
+    box-shadow: 1px 4px 10px rgb(0 0 0 / 13%);
+}
+.completo{
+  display: none;
+}
+@media (min-width: 767px) {
+  .download_class{
+    top: 20px !important;
+  }
+}
+
+/* fonte do texto no item de login */
+
+.user-panel>.info>p {
+    color: #616161;
+    font-weight: 600;
+    margin-bottom: 9px;
+    font-size: 15px;
+    font-family: 'Grape Nuts', cursive;
+    /* font-size: medium; */
+}
+
+html * 
+{
+  font-family: 'Akshar', sans-serif; 
+}
+
+.content-wrapper {
+    padding: 0px 30px;
+    background: rgba(250, 250, 250, 0.7); /* Ajuste o último valor (0.7) para controlar a transparência */
+    background-image: url('/img/background_bank.jpg');
+    background-repeat: round;
+}
+
+
+
+

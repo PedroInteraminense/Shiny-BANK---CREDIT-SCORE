@@ -1,0 +1,102 @@
+dados_treino <- dados_treino %>% mutate_all(as.numeric)
+dados_teste <- dados_teste %>% mutate_all(as.numeric)
+
+# Separar as variáveis independentes (X) e a variável dependente (Y)
+X <- GiveMeSomeCredit_training3 %>% select(-SeriousDlqin2yrs)
+Y <- GiveMeSomeCredit_training3$SeriousDlqin2yrs
+
+# Dividir os dados em conjunto de treinamento e teste
+set.seed(123) # Definir a semente para garantir a reprodutibilidade
+data_split <- initial_split(GiveMeSomeCredit_training3, prop = 0.8, strata = 'SeriousDlqin2yrs')
+train_data <- training(data_split) %>% mutate_all(as.numeric)
+test_data <- testing(data_split) %>% mutate_all(as.numeric)
+
+# Separar X_train, Y_train, X_test e Y_test
+X_train <- train_data %>% select(-AttritionFlag)
+Y_train <- train_data$AttritionFlag
+X_test <- test_data %>% select(-AttritionFlag)
+Y_test <- test_data$AttritionFlag
+
+
+# Load the necessary library for XGBoost
+library(xgboost)
+
+# Convert data frames to matrices
+X_train_matrix <- as.matrix(X_train)
+X_teste_matrix <- as.matrix(X_test)
+
+# Create an XGBoost classifier
+clf <- xgboost(data = X_train_matrix, label = Y_train, nrounds = 50)  # Add nrounds parameter
+
+# Predictions on the test set
+y_pred <- predict(clf, newdata = X_teste_matrix)
+
+# Confusion matrix
+cm <- table(Y_test, y_pred)
+print(cm)
+
+
+# Calculate prediction probabilities
+y_scores <- predict(clf, newdata = X_teste_matrix, type = "prob")
+
+# Calculate KS statistic
+library(pROC)
+
+roc_data <- roc(Y_test, y_scores)
+ks_statistic <- max(roc_data$sensitivities - roc_data$specificities)
+print(paste("KS statistic:", ks_statistic))
+
+
+# Carregando as bibliotecas necessárias
+library(dplyr)
+library(ggplot2)
+
+# Probabilidades previstas
+
+
+# As probabilidades previstas e os rótulos reais
+df_decile <- data.frame('y_true' = Y_test, 'y_prob' = y_scores)
+
+# Observações com base nas probabilidades previstas
+df_decile <- df_decile %>% arrange(desc(y_prob))
+
+# Tamanho do decil
+n <- nrow(df_decile)
+decile_size <- n %/% 10
+
+# Vetor para armazenar os rótulos decil
+decile_labels <- rep(1:10, each = decile_size)
+
+# Se o tamanho do vetor decile_labels for menor que n, adicione rótulos extras
+if (length(decile_labels) < n) {
+  decile_labels <- c(decile_labels, rep(10, n - length(decile_labels)))
+}
+
+# Atribua os rótulos decil ao data frame
+df_decile$decile <- decile_labels
+
+# Calcule a taxa de mau pagadores para cada grupo decil
+decile_stats <- df_decile %>% group_by(decile) %>% summarise('Mau Pagadores' = mean(y_true)) %>% ungroup()
+
+# Taxa de mau pagadores para cada decil
+print(decile_stats)
+
+# Gráfico de linhas com fundo branco
+ggplot(data = decile_stats, aes(x = decile, y = `Mau Pagadores`)) +
+  geom_line(color = "#00887D") +
+  geom_point(color = "#00887D") +
+  geom_text(aes(label = paste0(sprintf("%.2f", `Mau Pagadores` * 100), "%")), hjust = -0.2, vjust = 0.5) +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(labels = scales::percent_format(), limits = c(0, 1), name = "Taxa de inadimplência") +
+  theme_bw() 
+# Gráfico de barras com representatividade
+ggplot(data = decile_stats, aes(x = decile)) +
+  geom_bar(aes(y = 1), stat = "identity", fill = "#00887D", alpha = 0.3) +
+  geom_line(aes(y = `Mau Pagadores`), color = "#00887D") +
+  geom_point(aes(y = `Mau Pagadores`), color = "#00887D") +
+  geom_text(aes(y = `Mau Pagadores`, label = paste0(sprintf("%.2f", `Mau Pagadores` * 100), "%")), hjust = -0.2, vjust = 0.5) +
+  scale_x_continuous(breaks = 1:10) +
+  scale_y_continuous(labels = scales::percent_format(), limits = c(0, 1), name = "Taxa de inadimplência") +
+  theme_bw()
+
+
