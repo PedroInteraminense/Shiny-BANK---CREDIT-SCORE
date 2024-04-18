@@ -1,4 +1,3 @@
-Claro, podemos integrar o código do servidor do módulo de produtos ao seu aplicativo Shiny e adicionar uma seção na apresentação para destacar essa funcionalidade. Aqui está a apresentação atualizada:
 
 ---
 
@@ -69,5 +68,3 @@ O projeto está estruturado em módulos para facilitar a manutenção e organiza
 - **Documentação**: Consulte a documentação interna para obter mais informações sobre as funcionalidades e como utilizar o aplicativo.
 
 ---
-
-Esta apresentação destaca a nova funcionalidade de manipulação de dados de produtos bancários integrada ao seu aplicativo Shiny. Você pode ajustar e expandir esta apresentação conforme necessário para fornecer mais detalhes sobre as funcionalidades adicionadas.
