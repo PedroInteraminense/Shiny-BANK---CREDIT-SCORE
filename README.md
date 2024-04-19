@@ -3,6 +3,14 @@
 
 # Aplicativo Shiny: BANK - CREDIT SCORE
 
+
+## Descrição do Projeto
+## Contexto do Problema
+Um gerente de banco está incomodado com cada vez mais clientes deixando os serviços de cartão de crédito. Eles realmente apreciariam se alguém pudesse prever quem será afetado para que possam proativamente ir ao cliente para fornecer-lhes melhores serviços e reverter as decisões dos clientes na direção oposta.
+
+## O Objetivo
+##Este projeto é realizado em uma sequência de etapas, sendo a primeira delas uma análise exploratória, onde o objetivo é conhecer o comportamento das variáveis e analisar atributos que indiquem uma forte relação com o cancelamento dos clientes do serviço de cartão de crédito. Após a segunda parte, que consiste na aplicação de técnicas de engenharia de recursos, o terceiro ato consiste na aplicação de um algoritmo de aprendizado de máquina para encontrar os melhores recursos para a construção do modelo. No final do projeto, após a conclusão de todas as etapas, um modelo de aprendizado de máquina será desenvolvido, capaz de prever, com base nos dados de um sistema, se um cliente deixará ou não o serviço de cartão de crédito.
+
 ## Visão Geral
 
 Este é um aplicativo Shiny desenvolvido para análise e pontuação de crédito, denominado BANK - CREDIT SCORE. Ele oferece uma interface interativa para visualização e análise de dados relacionados ao crédito bancário, bem como funcionalidades para manipulação de dados de produtos.
